@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="imagens/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Artista e desenvolvedor</p>
+                <h1>Olá, sou <span>Pumpkin</span>, bem <br>vindo ao meu portfolio</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------about------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="imagens/user_resized.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre mim</h1>
+                    <p>Sou desenhista e estudante do 2° ano do ensino medio tecnico. Sou um artista autodidata e costumo desenhar como hobie, criando personagens e escrevendo histórias sobre eles. Criador do Memento, o barqueiro poeta.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('Cursos')">Cursos</p>
+                        <p class="tab-links" onclick="opentab('educação')">educação</p>
+                    </div>
+                    <!--habilidades-->
+                    <div class="tab-contents active-tab" id="Habilidades">
+                        <ul>
+                            <li><span>Ilustração</span><br>criação de design de personagens</li>
+                            <li><span>UI</span><br>Desenvolvimento de sites Web</li>
+                        </ul>
+                    </div>
+                    <!---Cursos (?)--->
+                    <div class="tab-contents" id="Cursos">
+                        <ul>
+                            <li><span>Alura: analise e projeto de sistemas</span><br>Scrum e projetos com Agile</li>
+                            <li><span>Alura: Programação front end</span><br>HTTP HTML5 e CSS3</li>
+                            <li><span>Alura: Programação mobile</span><br>UX</li>
+                            <li><span>Alura: Banco de dados</span><br>Modelagem de banco de dados e modelagem de banco de dados relacional</li>
+                        </ul>
+                    </div>
+                    <!---estudo--->
+                    <div class="tab-contents" id="educação">
+                        <ul>
+                            <li><span>Curso técnico</span><br>Analise e desenvolvimento de sistemas<br>banco de dados<br>programação front end<br>programação mobile</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------portfólio-------->
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">Meus trabalhos</h1>
+        <div class="work-list">
+            <div class="trabalhos">
+                <img src="imagens/mario_2.jpg">
+                <div class="layer">
+                    <h3>Mário Bros</h3>
+                    <p>Projeto criado durante as aulas de programação front end.</p>
+                    <a href="https://nickalberti.github.io/Mario/"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+            <div class="trabalhos">
+                <img src="imagens/beneficios.jpg">
+                <div class="layer">
+                    <h3>Barbearia Alura</h3>
+                    <p>Projeto criado durante o curso de HTML5 E CSS3.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="trabalhos">
+                <img src="imagens/parque tingui.jpeg">
+                <h3>Pontos turisticos de Curitiba</h3>
+                    <p>Projeto criado durante as aulas de programação front end.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html>
